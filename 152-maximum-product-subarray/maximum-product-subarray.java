@@ -21,7 +21,7 @@ class Solution {
         int ans=nums[0];
         for(int i=1;i<n;i++){
             int num=nums[i];
-            int a=num;;
+            int a=num;
             int b=num*max[i-1];
             int c=num*min[i-1];
             max[i]=Math.max(a,Math.max(b,c));
