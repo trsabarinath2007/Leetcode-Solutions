@@ -5,17 +5,12 @@ class Solution {
         int right = chars.length - 1;
         
         while (left < right) {
-            // Move left pointer until a vowel is found
             while (left < right && !isVowel(chars[left])) {
                 left++;
             }
-            
-            // Move right pointer until a vowel is found
             while (left < right && !isVowel(chars[right])) {
                 right--;
             }
-            
-            // Swap the vowels
             if (left < right) {
                 char temp = chars[left];
                 chars[left] = chars[right];
@@ -27,7 +22,6 @@ class Solution {
         
         return new String(chars);
     }
-    
     private boolean isVowel(char c) {
         return "aeiouAEIOU".indexOf(c) != -1;
     }
